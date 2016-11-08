@@ -13,6 +13,13 @@ var Storage = {
         this.items.splice(i,1);
       }
     }
+  },
+  put: function(name) {
+   for (var i = 0; i < this.items.length; i++) {
+    if(this.items[i].name == id){
+        this.items[i].splice(name,id);
+      }
+    }
   }
 };
 
@@ -92,7 +99,8 @@ app.listen(process.env.PORT || 8080,function(){
   console.log('app is running on server http://localhost:8080');
 });
 
-
+exports.app = app;
+exports.storage = storage;
 
 
 
